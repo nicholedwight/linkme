@@ -1,6 +1,8 @@
 <h2>fwends</h2>
 <% @friendships.each do |friendship| %>
 <p>
+  <%= User.find(friendship.friend_id).first_name %>
+  <%= User.find(friendship.friend_id).last_name %>
   <%= User.find(friendship.friend_id).email %>
 
   (<%= link_to "remove", friendship, :method => :delete %>)
