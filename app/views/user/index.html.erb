@@ -1,6 +1,8 @@
 <h1>hi</h1>
 <% @users.each do |user| %>
   <p>
-    <%= user.email %> <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post  %>
+    <%= user.first_name %>
+    <%= user.last_name %>
+    (<%= user.email %>) <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post  %>
   </p>
 <% end %>
