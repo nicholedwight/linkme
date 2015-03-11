@@ -1,0 +1,6 @@
+<h2>fwends</h2>
+<% @friendships.each do |friendship| %>
+<p>
+  <%= User.find(friendship.friend_id).email %>
+</p>
+<% end %>
