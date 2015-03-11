@@ -2,5 +2,7 @@
 <% @friendships.each do |friendship| %>
 <p>
   <%= User.find(friendship.friend_id).email %>
+
+  (<%= link_to "remove", friendship, :method => :delete %>)
 </p>
 <% end %>
